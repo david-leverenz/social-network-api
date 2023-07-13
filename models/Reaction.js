@@ -30,8 +30,8 @@ const reactionSchema = new Schema(
   }
 );
 
-reactionSchema.virtual('formattedTimestamp').get(function () {
-  return this.createdAt.toLocaleString("MM-DD-YYYY");
-});
+// reactionSchema.virtual('formattedTimestamp').get(function () {
+//   return this.createdAt.toLocaleString("MM-DD-YYYY");
+// });
 
 module.exports = reactionSchema;
