@@ -10,7 +10,7 @@ When you test the API POST, PUT, and DELETE routes in Insomnia you are able to s
 When you test the API POST and DELETE routes in Insomnia you are able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list.<br>
 
 ## Links
-**GitHub:** https://github.com/david-leverenz/e-commerce<br>
+**GitHub:** [https://github.com/david-leverenz/e-commerce](https://github.com/david-leverenz/social-network-api)<br>
 **Walkthrough Video:** <br>
 **Live Link:** N/A <br>
 **Screen Shot:** <br>
