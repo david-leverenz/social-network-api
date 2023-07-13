@@ -20,6 +20,7 @@ const userSchema = new Schema(
       {
         type: Schema.Types.ObjectId,
         ref: 'thought'
+        // need something like "cascade" to remove thoughts and friends if a user is deleted.
       }
     ],
     friends: [
