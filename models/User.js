@@ -19,20 +19,21 @@ const userSchema = new Schema(
     thoughts: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'Thought',
-      },
+        ref: 'thought'
+      }
     ],
-  friends: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'User',
-    },
-  ],
-},
-{
+    friends: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'user'
+      }
+    ],
+  },
+  {
     // Mongoose supports two Schema options to transform Objects after querying MongoDb: toJSON and toObject.
     // Here we are indicating that we want virtuals to be included with our response, overriding the default behavior
     toJSON: {
+      getters: true,
       virtuals: true,
     },
     id: false,
@@ -40,13 +41,11 @@ const userSchema = new Schema(
 );
 
 // Create a virtual called `friendCount` that retrieves the length of the user's `friends` array field on query.
-// userSchema
-//   .virtual('friendCount')
-//   const friendCount = async () => {
-//     const numberOfFriends = await User.friends.aggregate();
-//     return numberOfFriends
-//   }
-  
+userSchema.virtual('friendCount').get(function () {
+  return `${this.friends.length}`;
+});
+
+
 
 
 // Initialize our User model
