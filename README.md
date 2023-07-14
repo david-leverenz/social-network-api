@@ -11,7 +11,7 @@ When you test the API POST and DELETE routes in Insomnia you are able to success
 
 ## Links
 **GitHub:** https://github.com/david-leverenz/social-network-api<br>
-**Walkthrough Video:** <br>
+**Walkthrough Video:** https://drive.google.com/file/d/1S18T-Qko4iUrhjjU6dZiU9f5S9ItvglA/view<br>
 **Screen Shot:** <br>
 ![image](https://github.com/david-leverenz/social-network-api/assets/131185593/16c785e1-88bd-4191-bee1-93343d74375c)
 
