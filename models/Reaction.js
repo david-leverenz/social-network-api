@@ -8,6 +8,7 @@ const reactionSchema = new Schema(
     },
     reactionBody: {
       type: String,
+      // Must have data in this field and the it has to be between 1 and 280 characters.
       required: true,
       minlength: 1,
       maxlength: 280,
@@ -15,7 +16,6 @@ const reactionSchema = new Schema(
     username: {
       type: String,
       required: true,
-           
     },
     createdAt: {
       type: Date,
@@ -29,10 +29,5 @@ const reactionSchema = new Schema(
     id: false,
   }
 );
-
-// reactionSchema.virtual('formattedTimestamp').get(function () {
-//   return this.createdAt.toLocaleString("MM-DD-YYYY");
-// });
-
 
 module.exports = reactionSchema;

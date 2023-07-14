@@ -3,6 +3,7 @@ const { Schema, model } = require('mongoose');
 // Schema to create User model
 const userSchema = new Schema(
   {
+    // username and email need to be unique and populated.  They are also trimmed to make sure no leading/trailing spaces are added to the database
     username: {
       type: String,
       unique: true,
@@ -14,13 +15,14 @@ const userSchema = new Schema(
       unique: true,
       required: true,
       trim: true,
+      // Below is a regex to validate the email address.
       match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
     },
+    // Thoughts and friends are, essentially, foreign keys in this model.  One user can have many friends and thoughts.
     thoughts: [
       {
         type: Schema.Types.ObjectId,
         ref: 'thought'
-        // need something like "cascade" to remove thoughts and friends if a user is deleted.
       }
     ],
     friends: [
@@ -31,7 +33,6 @@ const userSchema = new Schema(
     ],
   },
   {
-    // Mongoose supports two Schema options to transform Objects after querying MongoDb: toJSON and toObject.
     // Here we are indicating that we want virtuals to be included with our response, overriding the default behavior
     toJSON: {
       getters: true,
@@ -45,9 +46,6 @@ const userSchema = new Schema(
 userSchema.virtual('friendCount').get(function () {
   return `${this.friends.length}`;
 });
-
-
-
 
 // Initialize our User model
 const User = model('user', userSchema);

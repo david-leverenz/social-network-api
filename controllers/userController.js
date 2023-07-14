@@ -1,3 +1,4 @@
+// This page defines what happens for each route defined in the userRoutes.js
 const { Thought } = require('../models');
 const User = require('../models/User');
 

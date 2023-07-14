@@ -1,3 +1,4 @@
+// This page defines what happens for each route defined in the thoughtRoutes.js
 const {Thought, User} = require('../models');
 
 module.exports = {

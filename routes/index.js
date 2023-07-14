@@ -1,3 +1,4 @@
+// Basic index file define our api route and location.
 const router = require('express').Router();
 const apiRoutes = require('./api');
 
