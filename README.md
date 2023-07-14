@@ -30,5 +30,5 @@ Version 1.0 Initial Release
 ## License
 This project is licensed under the MIT license.
 ## Acknowledgments
-Special thanks to 
+Special thanks to myself.  Because I started and finished this project in one sitting, without any help from other people.  Nice work, self.
 
