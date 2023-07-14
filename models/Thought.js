@@ -25,16 +25,16 @@ const thoughtSchema = new Schema(
     // Here we are indicating that we want virtuals to be included with our response, overriding the default behavior
     toJSON: {
       getters: true,
+      // virtuals: true,
     },
     id: false,
   }
 );
 
-// Create a function that formats the timestamp for later use in a query.
-
-// thoughtSchema.virtual('formattedTimestamp').get(function () {
-//   return this.createdAt.toLocaleString("MM-DD-YYYY");
-// });
+// Create a function to return thoughts
+thoughtSchema.virtual('reactionCount').get(function () {
+  return this.reactions.length;
+});
 
 
 
