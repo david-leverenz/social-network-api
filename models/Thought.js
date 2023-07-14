@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const reactionSchema = require('./Reaction')
 
 // Schema to create User model
 const thoughtSchema = new Schema(
@@ -31,9 +32,9 @@ const thoughtSchema = new Schema(
 
 // Create a function that formats the timestamp for later use in a query.
 
-thoughtSchema.virtual('formattedTimestamp').get(function () {
-  return this.createdAt.toLocaleString("MM-DD-YYYY");
-});
+// thoughtSchema.virtual('formattedTimestamp').get(function () {
+//   return this.createdAt.toLocaleString("MM-DD-YYYY");
+// });
 
 
 

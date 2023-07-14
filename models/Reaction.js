@@ -19,7 +19,7 @@ const reactionSchema = new Schema(
     },
     createdAt: {
       type: Date,
-      default: Date.now,
+      default: Date.now(),
     },
   },
   {
@@ -33,5 +33,6 @@ const reactionSchema = new Schema(
 // reactionSchema.virtual('formattedTimestamp').get(function () {
 //   return this.createdAt.toLocaleString("MM-DD-YYYY");
 // });
+
 
 module.exports = reactionSchema;
