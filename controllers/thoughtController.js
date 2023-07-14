@@ -47,5 +47,15 @@ module.exports = {
         } catch (err) {
             res.status(500).json(err);
         }
-    }
+    },
+        // Delete a thought.
+        async deleteThought(req, res) {
+            try {
+                const thoughtData = await Thought.findOneAndDelete({ _id: req.params.thoughtId });
+                res.status(200).json(thoughtData)
+            } catch (err) {
+                res.status(500).json(err);
+            }
+    
+        },
 }
