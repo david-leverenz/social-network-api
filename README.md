@@ -1,5 +1,5 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-# social-network-api
+# Social Network API
 This is the backend for a social networking site.
 
 ## Description
